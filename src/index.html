@@ -2,16 +2,16 @@
 Motor Temperature
   </p>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<canvas id="myChart" width="400" height="400"></canvas>
+<canvas id="myChart" width="100" height="100"></canvas>
 <script>
   var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels:  ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels:  ['Day1', 'Day2', 'Day3', 'Day4', 'Day5', 'Day6'],
         datasets: [{
             label: 'Amp',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [1, 15, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
