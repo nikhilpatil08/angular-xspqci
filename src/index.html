@@ -2,13 +2,12 @@
  <img class="thumbnail inline" 
   src="https://targetjobs.co.uk/sites/targetjobs.co.uk/files/public/field_ad_org_logo/united-utilities-new.png">
 
-  <my-app>loading</my-app>
- 
+<my-app>loading</my-app>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
-
 </script>
-<div style="width: 600px">
+<div style="width: 400px">
 <canvas id="Chart1" width="10" height="10"></canvas>
 
 <script>
@@ -38,14 +37,21 @@ var Chart1 = new Chart(ctx, {
         title: {
             display: true,
             text: 'Chemical Cost'
-        }
-    }
+              },
+        layout: {
+            padding: {
+            left: 00,
+            right: 0,
+            top: 0,
+            bottom: 0,
+                  }
+            } 
+      }
 });
 </script>
 
 
 <canvas id="Chart2" width="10" height="10"></canvas>
-
 <script>
 var ctx = document.getElementById('Chart2').getContext('2d');
 var Chart2 = new Chart(ctx, {
@@ -61,7 +67,6 @@ var Chart2 = new Chart(ctx, {
             
            },{
             label: 'Kwh',
-            
             fill: false,
             borderColor: "rgba(0, 0,0,1)",
             backgroundColor: "rgba(0, 0,0,1)",
@@ -73,7 +78,16 @@ var Chart2 = new Chart(ctx, {
         title: {
             display: true,
             text: 'Energy Cost & Daily Utilisation'
-        }
+              },
+        layout:{
+            padding: {
+            left: 50,
+            right: 0,
+            top: 0,
+            bottom:0,
+                  }
+            } 
+      }
     }
 });
 </script>
