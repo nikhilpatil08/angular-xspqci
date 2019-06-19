@@ -25,7 +25,7 @@
 </div>
 <div class="imgbox"<br>
   <img style="width:200%">
-  <button onclick="resetElement2()">Anchorsholme</button>
+  <button onclick="resetElement1()">Anchorsholme</button>
 </div>
 <div class="imgbox"<br>
   <img style="width:100%">
@@ -36,15 +36,6 @@
   <img style="width:100%">
   <button onclick="resetElement2()">Crewe</button>
 </div>
-
-<table style="width: 100%"
-      <tr><th><img style="float: left;width:100%"
-        src="http://annualreport2014.unitedutilities.com/media/128295/operationalarea.png">
-      </th>
-      
-        </tr>
-          
-      </table>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
@@ -346,7 +337,6 @@ button {
 </head>
 <body>
 
-
 <script>
 
 function changeVisibility() {
@@ -370,15 +360,16 @@ function resetElement1() {
   document.getElementById("Chart7").style.visibility = "hidden";
   document.getElementById("Chart8").style.visibility = "hidden";
 }
+
 function resetElement2() {
-  document.getElementById("Chart5").style.visibility = "visible";
-  document.getElementById("Chart6").style.visibility = "visible";
-  document.getElementById("Chart7").style.visibility = "visible";
-  document.getElementById("Chart8").style.visibility = "visible";
   document.getElementById("Chart1").style.visibility = "hidden";
   document.getElementById("Chart2").style.visibility = "hidden";
   document.getElementById("Chart3").style.visibility = "hidden";
   document.getElementById("Chart4").style.visibility = "hidden";
+  document.getElementById("Chart5").style.visibility = "visible";
+  document.getElementById("Chart6").style.visibility = "visible";
+  document.getElementById("Chart7").style.visibility = "visible";
+  document.getElementById("Chart8").style.visibility = "visible";
+  
 }
-
 </script>
