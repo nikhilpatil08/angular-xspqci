@@ -8,13 +8,13 @@ import { MouseEvent } from '@agm/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Wate Water Treatment Works';
+ 
   // google maps zoom level
   zoom: number = 8;
   
   // initial center position for the map
-  lat: number = 51.673858;
-  lng: number = 7.815982;
+  lat: number = 53.402477;
+  lng: number = -2.6676186;
 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
@@ -34,21 +34,31 @@ export class AppComponent  {
   
   markers: marker[] = [
 	  {
-		  lat: 51.673858,
-		  lng: 7.815982,
+		 //Anchorsholme (New) - North Site
+		  lat: 53.870083,
+		  lng: -3.046433,
 		  label: 'A',
 		  draggable: true
 	  },
 	  {
-		  lat: 51.373858,
-		  lng: 7.215982,
+      // Crew - South
+		  lat: 53.112794,
+		  lng: -2.504451,
 		  label: 'B',
 		  draggable: false
 	  },
 	  {
-		  lat: 51.723858,
-		  lng: 7.895982,
+      //Failsworth - East
+		  lat: 53.495160,
+		  lng: -2.158679,
 		  label: 'C',
+		  draggable: true
+	  },
+    {
+      //Liverpool - West
+		  lat: 53.427303,
+		  lng: -2.999070,
+		  label: 'D',
 		  draggable: true
 	  }
   ]
