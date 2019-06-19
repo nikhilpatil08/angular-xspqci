@@ -12,16 +12,39 @@
         </tr>
       </table>
 
+<div class="imgbox" ><br>
+  <img style="position: absolute; width: 10px;">
+  <button onclick="changeVisibility()">Overview</button>
+</div>
+<div class="imgbox"<br>
+  <img style="width:100%">
+  <button onclick="resetElement()">North Zone</button>
+</div>
+<div class="imgbox"<br>
+  <img style="width:100%">
+  <button onclick="resetElement()">South Zone</button>
+</div>
+<div class="imgbox"<br>
+  <img style="width:100%">
+  <button onclick="resetElement()">East Zone</button>
+</div>
+<div class="imgbox"<br>
+  <img style="width:100%">
+  <button onclick="resetElement()">West Zone</button>
+</div>
+
 <my-app>loading</my-app>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </script>
-<div id="chart1" style="position: absolute; top: 500px; left: 3px; width: 800px; height: 800px;">
+<div id="chart1" style="position: absolute; top: 600px; left: 3px; width: 800px; height: 800px;">
 <canvas id="Chart1" width="10" height="10"></canvas>
 <script>
 var ctx = document.getElementById('Chart1').getContext('2d');
-
+document.getElementById("Chart1").style.visibility = "hidden";
 var Chart1 = new Chart(ctx, {
     type: 'bar',
   data: {
@@ -56,6 +79,7 @@ var Chart1 = new Chart(ctx, {
 <canvas id="Chart2" width="10" height="10"></canvas>
 <script>
 var ctx = document.getElementById('Chart2').getContext('2d');
+document.getElementById("Chart2").style.visibility = "hidden";
 var Chart2 = new Chart(ctx, {
     type: 'line',
   data: {
@@ -88,6 +112,7 @@ var Chart2 = new Chart(ctx, {
 <canvas id="Chart3" width="10" height="10"></canvas>
 <script>
 var ctx = document.getElementById('Chart3').getContext('2d');
+document.getElementById("Chart3").style.visibility = "hidden";
 var Chart3 = new Chart(ctx, {
     type: 'line',
   data: {
@@ -124,6 +149,7 @@ var Chart3 = new Chart(ctx, {
 <script>
 
 var ctx = document.getElementById('Chart4').getContext('2d');
+document.getElementById("Chart4").style.visibility = "hidden";
 var Chart4 = new Chart(ctx, {
     type: 'line',
   data: {
@@ -154,3 +180,61 @@ var Chart4 = new Chart(ctx, {
 });
 </script>
 
+<style>
+.imgbox {
+  float: left;
+  text-align: center;
+  width: 120px;
+  border: 1px solid gray;
+  margin: 4px;
+  padding: 6px;
+}
+
+button {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+<h3>Difference between display:none and visiblity: hidden</h3>
+<p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
+<p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+
+<div class="imgbox" id="imgbox1">Box 1<br>
+  <img src="img_5terre.jpg" alt="Italy" style="width:100%">
+  <button onclick="removeElement()">Remove</button>
+</div>
+
+<div class="imgbox" id="imgbox2">Box 2<br>
+  <img src="img_lights.jpg" alt="Lights" style="width:100%">
+  <button onclick="changeVisibility()">Hide</button>
+</div>
+
+<div class="imgbox">Box 3<br>
+  <img src="img_forest.jpg" alt="Forest" style="width:100%">
+  <button onclick="resetElement()">Reset All</button>
+</div>
+
+<script>
+function removeElement() {
+  document.getElementById("Chart1").style.display = "none";
+  document.getElementById("Chart2").style.display = "none";
+  document.getElementById("Chart3").style.display = "none";
+  document.getElementById("Chart4").style.display = "none";
+}
+
+function changeVisibility() {
+  document.getElementById("Chart1").style.visibility = "hidden";
+  document.getElementById("Chart2").style.visibility = "hidden";
+  document.getElementById("Chart3").style.visibility = "hidden";
+  document.getElementById("Chart4").style.visibility = "hidden";
+}
+
+function resetElement() {
+  document.getElementById("Chart1").style.visibility = "visible";
+  document.getElementById("Chart2").style.visibility = "visible";
+  document.getElementById("Chart3").style.visibility = "visible";
+  document.getElementById("Chart4").style.visibility = "visible";
+}
+</script>
