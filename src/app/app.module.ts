@@ -11,7 +11,7 @@ import { AgmCoreModule } from '@agm/core';
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
       apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
     }) ],
-  declarations: [ AppComponent, HelloComponent],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, HelloComponent], 
+  bootstrap:    [ AppComponent ],
 })
 export class AppModule { }
