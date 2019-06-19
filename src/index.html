@@ -18,20 +18,17 @@
 </div>
 <div class="imgbox"<br>
   <img style="width:100%">
-  <button onclick="resetElement()">Liverpool WwTW</button>
+  <button onclick="resetElement1()">Liverpool WwTW</button>
 </div>
 <div class="imgbox"<br>
   <img style="width:200%">
-  <button onclick="resetElement()">Anchorsholme WwPS</button>
+  <button onclick="resetElement2()">Anchorsholme WwPS</button>
 </div>
 <div class="imgbox"<br>
   <img style="width:100%">
-  <button onclick="resetElement()">Failsworth WwTW</button>
+  <button onclick="resetElement3()">Failsworth WwTW</button>
 </div>
-<div class="imgbox"<br>
-  <img style="width:100%">
-  <button onclick="resetElement()">Crewe WwTW</button>
-</div>
+
 
 <my-app>loading</my-app>
 
@@ -180,6 +177,146 @@ var Chart4 = new Chart(ctx, {
 });
 </script>
 
+</script>
+<div id="chart5" style="position: absolute; top: 600px; left: 50px; width: 600px; height: 800px;">
+<canvas id="Chart5" width="10" height="10"></canvas>
+<script>
+var ctx = document.getElementById('Chart1').getContext('2d');
+document.getElementById("Chart5").style.visibility = "hidden";
+var Chart1 = new Chart(ctx, {
+    type: 'line',
+  data: {
+        labels:  ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+         datasets: [{
+            label: 'Frc_Cost',
+            fill: false,
+            borderColor: "rgba(75, 72,192,1)",
+            backgroundColor: "rgba(75, 72,192,1)",
+            data: [10, 5, 3, 5, 2, 4],
+            
+           },{
+            label: 'Cau_Cost',
+            
+            fill: false,
+            borderColor: "rgba(192, 72,192,1)",
+            backgroundColor: "rgba(192, 72,192,1)",
+            data: [6, 4, 3, 5, 4, 3],
+           }
+           ]
+    },
+      options:{
+        title: {
+            display: true,
+            text: 'Chemical Cost'
+        }
+    }
+});
+</script>
+
+<div id="Chart6" style="position: absolute; top: 0px; left: 850px; width: 600px; height: 800px;">
+<canvas id="Chart6" width="10" height="10"></canvas>
+<script>
+var ctx = document.getElementById('Chart2').getContext('2d');
+document.getElementById("Chart6").style.visibility = "hidden";
+var Chart2 = new Chart(ctx, {
+    type: 'bar',
+  data: {
+        labels:  ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun'],
+         datasets: [{
+            label: 'Energy Cost',
+            fill: false,
+            borderColor: "rgba(165, 42,42,1)",
+            backgroundColor: "rgba(165, 42,42,1)",
+            data: [4, 5, 3, 5, 2, 4,3],
+            
+           },{
+            label: 'Kwh',
+            fill: false,
+            borderColor: "rgba(0, 0,0,1)",
+            backgroundColor: "rgba(0, 0,0,1)",
+            data: [6, 4, 3, 5, 4, 3,4],
+           }
+           ]
+    },
+      options:{
+        title: {
+            display: true,
+            text: 'Energy Cost & Daily Utilisation'
+        }
+    }
+ });
+</script>
+<div id="chart7" style="position: absolute; top: 800px; left:-850px; width: 600px; height: 800px;">
+<canvas id="Chart7" width="10" height="10"></canvas>
+<script>
+var ctx = document.getElementById('Chart7').getContext('2d');
+document.getElementById("Chart7").style.visibility = "hidden";
+var Chart3 = new Chart(ctx, {
+    type: 'line',
+  data: {
+        labels:  ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun'],
+         datasets: [{
+            label: 'Inlet Flow (0-30 MLD)',
+            fill: false,
+            borderColor: "rgba(165, 42,42,1)",
+            backgroundColor: "rgba(165, 42,42,1)",
+            data: [8, 5, 13, 25, 22,15,24],
+            
+           },{
+            label: 'Outlet Flow (0-30 MLD)',
+            
+            fill: false,
+            borderColor: "rgba(0, 0,255,1)",
+            backgroundColor: "rgba(0, 0,255,1)",
+            data: [16, 4, 13, 25, 14,18, 29],
+           }
+           ]
+    },
+      options:{
+        title: {
+            display: true,
+            text: 'Total Input Output Daily Flow'
+        }
+    }
+});
+</script>
+<div id="chart8" style="position: absolute; top: 0px; left:850px; width: 600px; height: 800px;">
+
+<canvas id="Chart8" width="10" height="10"></canvas>
+
+<script>
+
+var ctx = document.getElementById('Chart4').getContext('2d');
+document.getElementById("Chart8").style.visibility = "hidden";
+var Chart4 = new Chart(ctx, {
+    type: 'line',
+  data: {
+        labels:  ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat','Sun'],
+         datasets: [{
+            label: 'Total Alarms',
+            fill: false,
+            borderColor: "rgba(255, 140,0,1)",
+            backgroundColor: "rgba(255, 140,0,1)",
+            data: [58, 75, 113, 125, 62,45,64],
+            
+           },{
+            label: 'Total High Severity Alarms',
+            
+            fill: false,
+            borderColor: "rgba(255, 0,0,1)",
+            backgroundColor: "rgba(255, 0,0,1)",
+            data: [8, 14, 33, 25, 14,20, 29],
+           }
+           ]
+    },
+      options:{
+        title: {
+            display: true,
+            text: 'Plant Alarm Status'
+        }
+    }
+});
+</script>
 <style>
 .imgbox {
   float: left;
@@ -205,12 +342,34 @@ function changeVisibility() {
   document.getElementById("Chart2").style.visibility = "hidden";
   document.getElementById("Chart3").style.visibility = "hidden";
   document.getElementById("Chart4").style.visibility = "hidden";
+  document.getElementById("Chart5").style.visibility = "hidden";
+  document.getElementById("Chart6").style.visibility = "hidden";
+  document.getElementById("Chart7").style.visibility = "hidden";
+  document.getElementById("Chart8").style.visibility = "hidden";
 }
 
-function resetElement() {
+function resetElement1() {
   document.getElementById("Chart1").style.visibility = "visible";
   document.getElementById("Chart2").style.visibility = "visible";
   document.getElementById("Chart3").style.visibility = "visible";
   document.getElementById("Chart4").style.visibility = "visible";
+}
+function resetElement2() {
+  document.getElementById("Chart5").style.visibility = "visible";
+  document.getElementById("Chart6").style.visibility = "visible";
+  document.getElementById("Chart7").style.visibility = "visible";
+  document.getElementById("Chart8").style.visibility = "visible";
+}
+function resetElement3() {
+  document.getElementById("Chart9").style.visibility = "visible";
+  document.getElementById("Chart10").style.visibility = "visible";
+  document.getElementById("Chart11").style.visibility = "visible";
+  document.getElementById("Chart12").style.visibility = "visible";
+}
+function resetElement4() {
+  document.getElementById("Chart13").style.visibility = "visible";
+  document.getElementById("Chart14").style.visibility = "visible";
+  document.getElementById("Chart15").style.visibility = "visible";
+  document.getElementById("Chart16").style.visibility = "visible";
 }
 </script>
